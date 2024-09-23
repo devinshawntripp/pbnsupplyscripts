@@ -4,6 +4,8 @@ import os
 from datetime import datetime
 import whois
 import time
+import sys
+
 # Database connection
 def get_db_connection():
     return psycopg2.connect(
@@ -35,7 +37,6 @@ def read_zone_file(file_path):
             if match:
                 record = match.groupdict()
                 domain_name = record['name'].rstrip('.')
-                # adding this domain to the set
                 print(f"Adding {domain_name} to the set")
                 unique_domains.add(domain_name)
             else:
@@ -68,9 +69,8 @@ def insert_domain(conn, domain, expiry_date):
     conn.commit()
     cur.close()
 
-if __name__ == "__main__":
-    zone_file_path = '/Users/devintripp/Downloads/org.txt'
-    unique_domains = read_zone_file(zone_file_path)
+def main(file_path):
+    unique_domains = read_zone_file(file_path)
     
     conn = get_db_connection()
     
@@ -81,3 +81,15 @@ if __name__ == "__main__":
     
     conn.close()
     print("Initial domain loading complete.")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python initial_domain_loader.py <file_path>")
+        sys.exit(1)
+    
+    file_path = sys.argv[1]
+    if not os.path.exists(file_path):
+        print(f"Error: File '{file_path}' does not exist.")
+        sys.exit(1)
+    
+    main(file_path)
