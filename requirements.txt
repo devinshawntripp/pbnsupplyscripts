@@ -3,3 +3,4 @@ requests
 beautifulsoup4
 langdetect
 psycopg2-binary
+python-dotenv
