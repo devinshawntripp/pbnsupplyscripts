@@ -17,10 +17,13 @@ RUN apt-get update && apt-get -y install cron
 # Create a directory for TLD files
 RUN mkdir /app/tld_files
 
-# Copy the cron file to the cron.d directory
+# Copy crontab file to the cron.d directory
 COPY crontab /etc/cron.d/domain-checker-cron
 
-# Give execution rights on the cron job
+# Ensure the crontab file has a newline at the end
+RUN echo "" >> /etc/cron.d/domain-checker-cron
+
+# Set permissions on the crontab file
 RUN chmod 0644 /etc/cron.d/domain-checker-cron
 
 # Apply cron job
@@ -30,4 +33,4 @@ RUN crontab /etc/cron.d/domain-checker-cron
 RUN touch /var/log/cron.log
 
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD ["cron", "-f"]
