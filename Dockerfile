@@ -4,15 +4,17 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy the requirements file into the container
+COPY requirements.txt /app/
 
 # Install any needed packages specified in requirements.txt
-COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install cron
-RUN apt-get update && apt-get -y install cron
+# Install cron and wget
+RUN apt-get update && apt-get -y install cron wget && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Copy the current directory contents into the container at /app
+COPY . /app
 
 # Create a directory for TLD files
 RUN mkdir /app/tld_files
