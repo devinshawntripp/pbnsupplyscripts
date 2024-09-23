@@ -1,0 +1,21 @@
+curl 'https://czds-api.icann.org/czds/downloads/org.zone' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Authorization: Bearer eyJraWQiOiJqM2cxWHNzZWxraHlOWk55MDhXZ3Ryb012cTlmSDRjR3RRdVJlZm9Za2d3IiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlBjN2lJX3BXMS1odWRpV3U3b0VZZldmdUxyUmN3SEY4cTJrQWUyWHBtTEUiLCJpc3MiOiJodHRwczovL2ljYW5uLWFjY291bnQub2t0YS5jb20vb2F1dGgyL2F1czFvbmVyZ2JNUmU2RXo5MnA3IiwiYXVkIjoiaHR0cHM6Ly9pY2Fubi1hY2NvdW50LWFkbWluLm9rdGEuY29tL3N0YWtlaG9sZGVyIiwiaWF0IjoxNzI3MDMzNTgwLCJleHAiOjE3MjcwMzcxODAsImNpZCI6IjBvYTMxdWUzN3p1azlMNlZ3MnA3IiwidWlkIjoiMDB1eW83ZnM0eWFzd0o5Q0QycDciLCJzY3AiOlsiZW1haWwiLCJpY2Fubi1jdXN0b20iLCJwcm9maWxlIiwib3BlbmlkIl0sImF1dGhfdGltZSI6MTcyNzAxODc5Niwic3ViIjoiZGV2aW5zaGF3bnRyaXBwQGdtYWlsLmNvbSIsImNvdW50cnlfb3JfdGVycml0b3J5IjoiVW5pdGVkIFN0YXRlcyBvZiBBbWVyaWNhIiwiZ2l2ZW5fbmFtZSI6IkRldmluIiwicmVnaW9uIjoiTkEiLCJmYW1pbHlfbmFtZSI6IlRyaXBwIiwiZW1haWwiOiJkZXZpbnNoYXdudHJpcHBAZ21haWwuY29tIn0.QTLig5E6fDC4C7VSBwSekm4zRhxAN6lSOkx1ST46NUYU2G6YZNUF6StC02SGkYgPbACEEOTP7qxNdZt74OHAmP-MYUdQwgS7LDIj5Wxp_ghsm13z7aTrB4XEfBvRjzPX85j2ZlQc8Ho7EsQpVrbo33zYjQ-0xdv_0wc6HI3D-mOB8c7zflWwyxUl07ywvOCv406NwrxeOnivKpmUUjZjkdrFuE1Aj2spEFkkBkCBWNkaUR1rV6UXqAyEb9gffcGVqHEXmkSK3l2oyPCzrByH95bz0in_l7eNV6WzwP3lIsnXmipqN-ls4Tu6muKS-dbj1a70624OXFdcPYZeATkRig' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-type: application/octet-stream' \
+  -H 'DNT: 1' \
+  -H 'Origin: https://czds.icann.org' \
+  -H 'Referer: https://czds.icann.org/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36' \
+  -H 'ngsw-bypass: true' \
+  -H 'sec-ch-ua: "Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"'
+
+
+
+  
