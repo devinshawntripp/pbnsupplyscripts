@@ -1,1 +1,1 @@
-59 23 * * * /usr/local/bin/python /app/brain.py >> /var/log/cron.log 2>&1
+59 23 * * * /usr/local/bin/python /app/domain_expiry_checker.py >> /var/log/cron.log 2>&1
